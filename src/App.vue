@@ -6,14 +6,14 @@ const calculadora = reactive({
   resultado: 0,
   num1: 0,
   num2: 0,
-  operation: 'sum',
+  operacao: 'sum',
 });
 
 function calculadora1(evt) {
   
   calculadora.num1 = parseInt(evt);
 
-  aritimetic(calculadora.operation);
+  aritimetic(calculadora.operacao);
 }
 
 
@@ -21,20 +21,20 @@ function calculadora2(evt) {
 
   calculadora.num2 = parseInt(evt);
 
-  aritimetic(calculadora.operation);
+  aritimetic(calculadora.operacao);
 
 }
 
 function aritimetic(evt) {
-  calculadora.operation = evt;
+  calculadora.operacao = evt;
 
-  if (calculadora.operation == 'sum') {
+  if (calculadora.operacao == 'sum') {
     sum(calculadora.num1, calculadora.num2);
-  } else if (calculadora.operation == 'substract') {
+  } else if (calculadora.operacao == 'substract') {
     substract(calculadora.num1, calculadora.num2);
-  } else if (calculadora.operation == 'multiply') {
+  } else if (calculadora.operacao == 'multiply') {
     multiply(calculadora.num1, calculadora.num2);
-  } else if (calculadora.operation == 'divide') {
+  } else if (calculadora.operacao == 'divide') {
     divide(calculadora.num1, calculadora.num2);
   }
 
